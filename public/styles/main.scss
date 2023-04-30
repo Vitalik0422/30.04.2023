@@ -1,0 +1,71 @@
+.main {
+    max-width: 1110px;
+    margin: 0 auto;
+
+    .topic {
+        width: 100%;
+
+        .topicNull {
+            color: rgb(194, 193, 192);
+            font-size: 35px;
+            padding-top: 100px;
+        }
+
+        .topicDiv {
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 900px;
+            position: relative;
+
+            .nameTopicDiv {
+                height: 40px;
+            }
+
+            .textTopicDiv:not(.on) {
+                font-size: 18px;
+                height: 18px;
+                overflow: hidden;
+            }
+            .on {
+                height: 100%;
+                font-size: 18px;
+            }
+
+            .btnTopicOpen{
+                width: 10px;
+                height: 10px;
+                border: 1px solid black;
+                background: black;
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 10px;
+
+        .nameTopic {
+            width: 400px;
+            height: 30px;
+        }
+
+        .textTopic {
+            display: block;
+            outline: none;
+            padding: 0;
+            width: 400px;
+            height: 400px;
+        }
+
+        .btnSubmit {
+            width: 100px;
+            height: 34px;
+        }
+    }
+}
