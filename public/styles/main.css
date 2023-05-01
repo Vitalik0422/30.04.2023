@@ -10,26 +10,23 @@
   font-size: 35px;
   padding-top: 100px;
 }
-.main .topic .topicDiv {
+.main .topic .topicDiv:not(.on) {
   border: 1px solid black;
   border-radius: 8px;
   padding: 10px;
   width: 900px;
+  height: 60px;
   position: relative;
 }
-.main .topic .topicDiv .nameTopicDiv {
+.main .topic .topicDiv:not(.on) .nameTopicDiv {
   height: 40px;
 }
-.main .topic .topicDiv .textTopicDiv:not(.on) {
+.main .topic .topicDiv:not(.on) .textTopicDiv {
   font-size: 18px;
   height: 20px;
   overflow: hidden;
 }
-.main .topic .topicDiv .on {
-  height: 100%;
-  font-size: 18px;
-}
-.main .topic .topicDiv .btnTopicOpen {
+.main .topic .topicDiv:not(.on) .btnTopicOpen {
   width: 10px;
   height: 10px;
   border: 1px solid black;
@@ -37,6 +34,17 @@
   position: absolute;
   bottom: 5px;
   right: 5px;
+}
+.main .topic .on {
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  width: 900px;
+  position: relative;
+}
+.main .topic .on .nameTopicDiv {
+  height: 40px;
 }
 .main form {
   display: flex;

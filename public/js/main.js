@@ -43,14 +43,15 @@ const renderHtml = (arrdata) => {
         topicList.innerHTML += `<li class="topicDiv">
                                 <div class="nameTopicDiv">${element.name}</div>
                                 <div class="textTopicDiv">${element.text}</div>
+                                <div class="btnTopicOpen"></div>
                                 </li>`
     });
     let li = document.querySelectorAll('.topicDiv')
     li.forEach(item => {
         item.addEventListener('click', (e)=> {
-            if(e.target.classList.contains('textTopicDiv')) {
+            if(e.target.classList.contains('btnTopicOpen')) {
                 console.log(e.target);
-                e.target.classList.toggle('on')
+                item.classList.toggle('on')
             }
         })
     })
