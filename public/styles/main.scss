@@ -24,7 +24,7 @@
 
             .textTopicDiv:not(.on) {
                 font-size: 18px;
-                height: 18px;
+                height: 20px;
                 overflow: hidden;
             }
             .on {
@@ -50,12 +50,12 @@
         margin-top: 20px;
         gap: 10px;
 
-        .nameTopic {
+        input[name=nameTopic] {
             width: 400px;
             height: 30px;
         }
 
-        .textTopic {
+        textarea[name=textTopic] {
             display: block;
             outline: none;
             padding: 0;

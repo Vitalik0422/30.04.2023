@@ -1,7 +1,7 @@
 const express = require('express')
 const ejs = require('ejs')
 const server  = express()
-const PORT = 8880;
+const PORT = 8881;
 
 const forumRoute = require('./routes/forumRouter')
 

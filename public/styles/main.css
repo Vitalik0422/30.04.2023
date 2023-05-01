@@ -22,7 +22,7 @@
 }
 .main .topic .topicDiv .textTopicDiv:not(.on) {
   font-size: 18px;
-  height: 18px;
+  height: 20px;
   overflow: hidden;
 }
 .main .topic .topicDiv .on {
@@ -44,11 +44,11 @@
   margin-top: 20px;
   gap: 10px;
 }
-.main form .nameTopic {
+.main form input[name=nameTopic] {
   width: 400px;
   height: 30px;
 }
-.main form .textTopic {
+.main form textarea[name=textTopic] {
   display: block;
   outline: none;
   padding: 0;

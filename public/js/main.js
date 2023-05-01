@@ -1,7 +1,5 @@
 const topicList = document.querySelector('.topic')
-const btnSubmit = document.querySelector('.btnSubmit')
-const nameTopic = document.querySelector('.nameTopic')
-const textTopic = document.querySelector('.textTopic')
+const formEl = document.querySelector('form')
 
 const loadPage = async () => {
     const auditData = await axios.get('/data')
@@ -21,8 +19,13 @@ loadPage()
 
 
 
-btnSubmit.addEventListener('click', () => {
-    run(nameTopic.value, textTopic.value)
+formEl.addEventListener('submit', (ev) => {
+    ev.preventDefault()
+    const formData = new FormData(ev.target)
+    const nameTopic = formData.get('nameTopic')
+    const textTopic = formData.get('textTopic')
+    console.log(textTopic, nameTopic);
+    run(nameTopic, textTopic)
     
 })
 
@@ -37,15 +40,18 @@ const run = async (nameTopic, textTopic) => {
 const renderHtml = (arrdata) => {
     topicList.innerHTML = ''
     arrdata.data.forEach(element => {
-        topicList.innerHTML += `<div class="topicDiv">
+        topicList.innerHTML += `<li class="topicDiv">
                                 <div class="nameTopicDiv">${element.name}</div>
                                 <div class="textTopicDiv">${element.text}</div>
-                                <div class="btnTopicOpen"></div>
-                                </div>`
+                                </li>`
     });
-    const textTopicDiv = document.querySelector('.textTopicDiv')
-    const btnTopicOpen = document.querySelector('.btnTopicOpen')
-    btnTopicOpen.addEventListener('click', () => {
-        textTopicDiv.classList.toggle('on')
+    let li = document.querySelectorAll('.topicDiv')
+    li.forEach(item => {
+        item.addEventListener('click', (e)=> {
+            if(e.target.classList.contains('textTopicDiv')) {
+                console.log(e.target);
+                e.target.classList.toggle('on')
+            }
+        })
     })
 }
