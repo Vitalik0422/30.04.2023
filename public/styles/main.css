@@ -10,41 +10,26 @@
   font-size: 35px;
   padding-top: 100px;
 }
-.main .topic .topicDiv:not(.on) {
+.main .topic .topicDiv {
   border: 1px solid black;
   border-radius: 8px;
-  padding: 10px;
+  background: rgb(234, 234, 238);
+  padding-top: 10px;
   width: 900px;
-  height: 60px;
-  position: relative;
+  height: 100%;
+  font-size: 30px;
+  margin-top: 10px;
 }
-.main .topic .topicDiv:not(.on) .nameTopicDiv {
-  height: 40px;
-}
-.main .topic .topicDiv:not(.on) .textTopicDiv {
-  font-size: 18px;
-  height: 20px;
+.main .topic .topicDiv .textTopicDiv:not(.on) {
+  height: 0px;
   overflow: hidden;
 }
-.main .topic .topicDiv:not(.on) .btnTopicOpen {
-  width: 10px;
-  height: 10px;
-  border: 1px solid black;
-  background: black;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-}
-.main .topic .on {
-  height: 100%;
-  border: 1px solid black;
+.main .topic .topicDiv .on {
   border-radius: 8px;
+  font-size: 18px;
   padding: 10px;
-  width: 900px;
-  position: relative;
-}
-.main .topic .on .nameTopicDiv {
-  height: 40px;
+  background: white;
+  height: 100%;
 }
 .main form {
   display: flex;

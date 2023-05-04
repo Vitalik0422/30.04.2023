@@ -11,48 +11,29 @@
             padding-top: 100px;
         }
 
-        .topicDiv:not(.on) {
+        .topicDiv {
             border: 1px solid black;
             border-radius: 8px;
-            padding: 10px;
+            background: rgb(234, 234, 238);
+            padding-top: 10px;
             width: 900px;
-            height: 60px;
-            position: relative;
+            height: 100%;
+            font-size: 30px;
+            margin-top: 10px;
 
-            .nameTopicDiv {
-                height: 40px;
-            }
-
-            .textTopicDiv {
-                font-size: 18px;
-                height: 20px;
+            .textTopicDiv:not(.on) {
+                height: 0px;
                 overflow: hidden;
             }
 
-            .btnTopicOpen{
-                width: 10px;
-                height: 10px;
-                border: 1px solid black;
-                background: black;
-                position: absolute;
-                bottom: 5px;
-                right: 5px;
+            .on {
+                border-radius: 8px;
+                font-size: 18px;
+                padding: 10px;
+                background: white;
+                height: 100%;
             }
         }
-
-        .on{
-            height: 100%;
-            border: 1px solid black;
-            border-radius: 8px;
-            padding: 10px;
-            width: 900px;
-            position: relative;
-
-            .nameTopicDiv {
-                height: 40px;
-            }
-        }
-
     }
 
     form {

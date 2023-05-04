@@ -1,9 +1,10 @@
 const express = require('express')
+const forumRoute = require('./routes/forumRouter')
 const ejs = require('ejs')
 const server  = express()
-const PORT = 8881;
+const PORT = 8884;
 
-const forumRoute = require('./routes/forumRouter')
+
 
 
 server.set('view engine','ejs')

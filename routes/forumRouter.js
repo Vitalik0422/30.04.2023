@@ -7,24 +7,16 @@ const fsp = fs.promises
 router.get('/', (req,res) =>{
     res.render('page')
 })
-
-const arrData = []
-
-
+const arrData = [
+    {name: 'Історія Укрїни', text:'ndList -- упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, *ndList *пуст.ndList -- переменная, хранящая список дочерних элементов. Тип этого списка -- NodeList.'},
+    {name: 'Безпека', text:'ndList -- упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, *ndList *пуст.ndList -- переменная, хранящая список дочерних элементов. Тип этого списка -- NodeList.'}
+]
 router.get('/data', (req,res) => {
     console.log(arrData);
     res.json(arrData)
 })
-
-
-
-
-router.post('/ajax', (req,res) => {
+router.post('/create', (req,res) => {
     arrData.push({name:req.body.name, text:req.body.text})
-    res.json(arrData)
+    res.json(arrData);
 })
-
-
-
-
-module.exports = router;
+module.exports = router; 
